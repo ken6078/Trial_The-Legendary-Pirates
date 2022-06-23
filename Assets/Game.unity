@@ -805,8 +805,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c80fa0ef154447589fd5c8c67d016dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showStr: "\u4ECA\u5929\u5929\u6C23\u5F88\u597D, \u6211\u89BA\u5F97\u6211\u8A72\u5BEB\u4E00\u4E0B\u7A0B\u5F0F
-    \u53EF\u662F\u6211\u4E0D\u6703\u5BEB\u7A0B\u5F0F"
+  testList:
+  - "\u4ECA\u5929\u5929\u6C23\u5F88\u597D"
+  - "\u6211\u89BA\u5F97\u6211\u8A72\u5BEB\u7A0B\u5F0F"
+  - "\u53EF\u662F\u6211\u4E0D\u6703\u5BEB\u7A0B\u5F0F"
   typingSpeed: 0.1
 --- !u!1 &1962069034
 GameObject:
