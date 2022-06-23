@@ -416,6 +416,7 @@ RectTransform:
   - {fileID: 380694725}
   - {fileID: 1115263269}
   - {fileID: 1428897153}
+  - {fileID: 611370942}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -559,6 +560,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588407707}
   m_CullTransparentMesh: 1
+--- !u!1 &611370941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611370942}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &611370942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611370941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 482989567}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1082933426
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +890,17 @@ MonoBehaviour:
   amber: {fileID: 327118640}
   jonny: {fileID: 380694724}
   bar: {fileID: 1115263268}
-  mtrl_bar_30: {fileID: 0}
+  mtrl_bar_90: {fileID: 2800000, guid: c0afae80a1908af408c36d5107febefe, type: 3}
+  mtrl_bar_80: {fileID: 2800000, guid: 581c9c21a5d4ffa468377a2f1b4c4607, type: 3}
+  mtrl_bar_70: {fileID: 2800000, guid: 8b2f290f91ca9ba488828407947927f1, type: 3}
+  mtrl_bar_60: {fileID: 2800000, guid: aae565f912ab6784aaee1f5643eab882, type: 3}
+  mtrl_bar_50: {fileID: 2800000, guid: d1a992b4444d1d5499666b8bd1b482aa, type: 3}
+  mtrl_bar_40: {fileID: 2800000, guid: 488db192ca664bf48ad7f7affdd67ec4, type: 3}
+  mtrl_bar_30: {fileID: 2800000, guid: 9973ab96495c6564fb2492431bd332ba, type: 3}
+  mtrl_bar_20: {fileID: 2800000, guid: 194faca64bee85b48986786ec45f143e, type: 3}
+  mtrl_bar_10: {fileID: 2800000, guid: 52e9e4ac754b2954ea9ae4495c4f984b, type: 3}
+  mtrl_bar_0: {fileID: 2800000, guid: 0f048fa0eef2bb74088f06c574b612fd, type: 3}
+  mtrl_bar: {fileID: 2800000, guid: 20a48ee0f3c2143e9ba18d345483483a, type: 3}
   testList:
   - "\u4ECA\u5929\u5929\u6C23\u5F88\u597D"
   - "\u6211\u89BA\u5F97\u6211\u8A72\u5BEB\u7A0B\u5F0F"

@@ -18,8 +18,16 @@ public class TextShow : MonoBehaviour
     [SerializeField] GameObject jonny;
     [SerializeField] GameObject bar; // 陪審團信心bar，需要換圖表示狀態
 
-    public Texture2D mtrl_bar_30; //我看文章做到一半，換圖的部分沒有很理解
-    // https://home.gamer.com.tw/creationDetail.php?sn=4877145
+    public Texture2D mtrl_bar_90;
+    public Texture2D mtrl_bar_80;
+    public Texture2D mtrl_bar_70;
+    public Texture2D mtrl_bar_60;
+    public Texture2D mtrl_bar_50;
+    public Texture2D mtrl_bar_40;
+    public Texture2D mtrl_bar_30;
+    public Texture2D mtrl_bar_20;
+    public Texture2D mtrl_bar_10;
+    public Texture2D mtrl_bar_0;
     public Texture2D mtrl_bar;
 
     //要顯示的字&跳出來的速度
@@ -78,39 +86,39 @@ public class TextShow : MonoBehaviour
                 }
                 // 等使用者輸入 數字鍵 上下 數字鍵盤得數字 其中一個
                 while( 
-                    (!Input.GetKey(KeyCode.LeftArrow)) && (!Input.GetKey(KeyCode.RightArrow)) &&
+                    (!Input.GetKey(KeyCode.UpArrow)) && (!Input.GetKey(KeyCode.DownArrow)) &&
                     (!Input.GetKey(KeyCode.Keypad1)) && (!Input.GetKey(KeyCode.Keypad2)) &&
                     (!Input.GetKey(KeyCode.Alpha1)) && (!Input.GetKey(KeyCode.Alpha2))
                 ){
                     yield return null;
                 }
                 // 判斷使用者輸入的選項
-                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.Alpha1)){
+                if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.Alpha1)){
                     Debug.Log("number 1");
                     ans_dict.Add("number 1"); //記錄下回答
 
-                    if(count%2==0){ //判斷是誰在說話
+                    if(name == "強尼戴普"){ //判斷是誰在說話
                         score += 10;
                         Debug.Log("Johnny's round");}
                     else{
                         score -= 10;
                         Debug.Log("Amber's round");}         
-                    Debug.Log("score:"+score);
-                    // bar.GetComponent<RawImage>().texture = mtrl_bar_30; //這裡是壞的，texture無法設定成功
-                    }
+                    Debug.Log("score:"+score); //目前分數
+                    setBar(score); //調整陪審團信心度
+                }
 
-                if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.Keypad2) || Input.GetKey(KeyCode.Alpha2)){
+                if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Keypad2) || Input.GetKey(KeyCode.Alpha2)){
                     Debug.Log("number 2");
                     ans_dict.Add("number 2"); //記錄下回答
-                    if(count%2==0){ //判斷是誰在說話
+                    if(name == "強尼戴普"){ //判斷是誰在說話
                         score -= 10;
                         Debug.Log("Johnny's round");}
                     else{
                         score += 10;
                         Debug.Log("Amber's round");}
-                    Debug.Log("score:"+score);
-                    // bar.GetComponent<RawImage>().texture = mtrl_bar; //這裡是壞的，texture無法設定成功
-                    }
+                    Debug.Log("score:"+score); //目前分數
+                    setBar(score); //調整陪審團信心度
+                }
 
                 Debug.Log("cur ans:" + ans_dict[count]); //目前的答題記錄
                 Debug.Log("cur count:" + count); //第幾題了
@@ -143,5 +151,20 @@ public class TextShow : MonoBehaviour
                 }
             }            
         } 
+    }
+    void setBar(int score){
+        switch(score){
+            case 90: bar.GetComponent<RawImage>().texture = mtrl_bar_90; break;
+            case 80: bar.GetComponent<RawImage>().texture = mtrl_bar_80; break;
+            case 70: bar.GetComponent<RawImage>().texture = mtrl_bar_70; break;
+            case 60: bar.GetComponent<RawImage>().texture = mtrl_bar_60; break;
+            case 50: bar.GetComponent<RawImage>().texture = mtrl_bar_50; break;
+            case 40: bar.GetComponent<RawImage>().texture = mtrl_bar_40; break;
+            case 30: bar.GetComponent<RawImage>().texture = mtrl_bar_30; break;
+            case 20: bar.GetComponent<RawImage>().texture = mtrl_bar_20; break;
+            case 10: bar.GetComponent<RawImage>().texture = mtrl_bar_10; break;
+            case 0: bar.GetComponent<RawImage>().texture = mtrl_bar_0; break;
+            default: bar.GetComponent<RawImage>().texture = mtrl_bar; break;
+        }
     }
 }
