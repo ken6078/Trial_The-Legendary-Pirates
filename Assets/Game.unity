@@ -230,7 +230,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 482989567}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -413,8 +413,9 @@ RectTransform:
   m_Children:
   - {fileID: 1082933427}
   - {fileID: 327118641}
-  - {fileID: 1428897153}
   - {fileID: 380694725}
+  - {fileID: 1115263269}
+  - {fileID: 1428897153}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -483,8 +484,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5B89\u67CF\u8D6B\u5FB7"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 735aa74ea4f554ddb9ec88b59f540bc6, type: 2}
-  m_sharedMaterial: {fileID: -6925159850271930282, guid: 735aa74ea4f554ddb9ec88b59f540bc6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f1a8cd69c2729fa44bc13faaddd72dc9, type: 2}
+  m_sharedMaterial: {fileID: 6207790676180309791, guid: f1a8cd69c2729fa44bc13faaddd72dc9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -634,6 +635,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082933426}
   m_CullTransparentMesh: 1
+--- !u!1 &1115263268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115263269}
+  - component: {fileID: 1115263271}
+  - component: {fileID: 1115263272}
+  m_Layer: 5
+  m_Name: Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1115263269
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115263268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 482989567}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 170}
+  m_SizeDelta: {x: 560, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1115263271
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115263268}
+  m_CullTransparentMesh: 1
+--- !u!114 &1115263272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115263268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 20a48ee0f3c2143e9ba18d345483483a, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1428897152
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +741,7 @@ RectTransform:
   - {fileID: 588407708}
   - {fileID: 1872644208}
   m_Father: {fileID: 482989567}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -774,15 +848,17 @@ MonoBehaviour:
   txt: {fileID: 4900000, guid: 985767b10d8534ba395e167df1a108e1, type: 3}
   NameTest: {fileID: 588407709}
   CharTest: {fileID: 1872644213}
-  reporter: {fileID: 0}
-  judge: {fileID: 0}
+  reporter: {fileID: 1962069034}
+  judge: {fileID: 1962069034}
   amber: {fileID: 327118640}
   jonny: {fileID: 380694724}
+  bar: {fileID: 1115263268}
+  mtrl_bar_30: {fileID: 0}
   testList:
   - "\u4ECA\u5929\u5929\u6C23\u5F88\u597D"
   - "\u6211\u89BA\u5F97\u6211\u8A72\u5BEB\u7A0B\u5F0F"
   - "\u53EF\u662F\u6211\u4E0D\u6703\u5BEB\u7A0B\u5F0F"
-  typingSpeed: 0.05
+  typingSpeed: 0.005
 --- !u!114 &1872644213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,8 +881,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 735aa74ea4f554ddb9ec88b59f540bc6, type: 2}
-  m_sharedMaterial: {fileID: -6925159850271930282, guid: 735aa74ea4f554ddb9ec88b59f540bc6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f1a8cd69c2729fa44bc13faaddd72dc9, type: 2}
+  m_sharedMaterial: {fileID: 6207790676180309791, guid: f1a8cd69c2729fa44bc13faaddd72dc9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
