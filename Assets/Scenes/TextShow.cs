@@ -17,6 +17,7 @@ public class TextShow : MonoBehaviour
     [SerializeField] GameObject judge;
     [SerializeField] GameObject amber;
     [SerializeField] GameObject jonny;
+    [SerializeField] GameObject jury;
     [SerializeField] GameObject bar; // 陪審團信心bar，需要換圖表示狀態 
 
     public Texture2D mtrl_bar_90;
@@ -53,7 +54,8 @@ public class TextShow : MonoBehaviour
             reporter.SetActive(false);
             judge.SetActive(false);
             amber.SetActive(false);
-            jonny.SetActive(false);  
+            jonny.SetActive(false);
+            jury.SetActive(false);
             //讀到#就判定為註解直接跳過
             if (testList[index] == "# END OF FILE")
                 SceneManager.LoadScene(2);
@@ -74,8 +76,10 @@ public class TextShow : MonoBehaviour
                     judge.SetActive(true);
                 else if (name == "安柏赫德")
                     amber.SetActive(true);
-                else
+                else if (name == "強尼戴普")
                     jonny.SetActive(true);
+                else
+                    jury.SetActive(true);
                 // 一個字一個字跳出來的效果
                 foreach (char letter in positiveAns.ToCharArray()) {
                     CharTest.text += letter;
@@ -139,8 +143,10 @@ public class TextShow : MonoBehaviour
                     judge.SetActive(true);
                 else if (name == "安柏赫德")
                     amber.SetActive(true);
-                else
+                else if (name == "強尼戴普")
                     jonny.SetActive(true);
+                else
+                    jury.SetActive(true);
                 setBar(Save.score); //調整陪審團信心度
 
                 // 一個字一個字跳出來的效果s

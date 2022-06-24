@@ -235,7 +235,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -563.97, y: 28.1}
-  m_SizeDelta: {x: 100, y: 80}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336175428
 MonoBehaviour:
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8938c72eacc4a48f6b6d9afd140c5fd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0328af12d16969f44a99410549908dcc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -494,6 +494,7 @@ RectTransform:
   - {fileID: 1115263269}
   - {fileID: 1511751040}
   - {fileID: 336175427}
+  - {fileID: 742836531}
   - {fileID: 1428897153}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -780,6 +781,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588407707}
   m_CullTransparentMesh: 1
+--- !u!1 &742836530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742836531}
+  - component: {fileID: 742836533}
+  - component: {fileID: 742836532}
+  m_Layer: 5
+  m_Name: Jury
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &742836531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742836530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.99, y: 4.99, z: 4.99}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 482989567}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -440, y: -34.7}
+  m_SizeDelta: {x: 200, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &742836532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742836530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c9e86c8cd043f408ea6fa7768bcf8b9b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &742836533
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742836530}
+  m_CullTransparentMesh: 1
 --- !u!1 &1082933426
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +1039,7 @@ RectTransform:
   - {fileID: 588407708}
   - {fileID: 1872644208}
   m_Father: {fileID: 482989567}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1034,7 +1111,7 @@ RectTransform:
   m_GameObject: {fileID: 1511751039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.8, y: 4.8, z: 4.8}
+  m_LocalScale: {x: 8.83, y: 8.83, z: 8.83}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 482989567}
@@ -1042,7 +1119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -560.4, y: 0}
+  m_AnchoredPosition: {x: -461.6, y: 18.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511751041
@@ -1119,6 +1196,7 @@ MonoBehaviour:
   judge: {fileID: 1511751039}
   amber: {fileID: 327118640}
   jonny: {fileID: 380694724}
+  jury: {fileID: 742836530}
   bar: {fileID: 1115263268}
   mtrl_bar_90: {fileID: 2800000, guid: c0afae80a1908af408c36d5107febefe, type: 3}
   mtrl_bar_80: {fileID: 2800000, guid: 581c9c21a5d4ffa468377a2f1b4c4607, type: 3}
@@ -1135,7 +1213,7 @@ MonoBehaviour:
   - "\u4ECA\u5929\u5929\u6C23\u5F88\u597D"
   - "\u6211\u89BA\u5F97\u6211\u8A72\u5BEB\u7A0B\u5F0F"
   - "\u53EF\u662F\u6211\u4E0D\u6703\u5BEB\u7A0B\u5F0F"
-  typingSpeed: 0.005
+  typingSpeed: 0.01
 --- !u!4 &1661900355
 Transform:
   m_ObjectHideFlags: 0

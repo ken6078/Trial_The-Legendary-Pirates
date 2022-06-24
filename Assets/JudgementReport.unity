@@ -299,7 +299,7 @@ MonoBehaviour:
   ReportText: {fileID: 1743131150}
   NextPage: {fileID: 1352109433}
   textList: []
-  typingSpeed: 0.001
+  typingSpeed: 0.002
 --- !u!4 &1616143963
 Transform:
   m_ObjectHideFlags: 0
