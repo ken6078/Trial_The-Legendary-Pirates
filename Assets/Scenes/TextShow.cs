@@ -17,7 +17,7 @@ public class TextShow : MonoBehaviour
     [SerializeField] GameObject judge;
     [SerializeField] GameObject amber;
     [SerializeField] GameObject jonny;
-    [SerializeField] GameObject bar; // 陪審團信心bar，需要換圖表示狀態
+    [SerializeField] GameObject bar; // 陪審團信心bar，需要換圖表示狀態 
 
     public Texture2D mtrl_bar_90;
     public Texture2D mtrl_bar_80;
@@ -44,8 +44,8 @@ public class TextShow : MonoBehaviour
     IEnumerator Type() {
         //讀劇本
         int count = 0; //題目計數器(從0開始)
-        ArrayList ans_dict = new ArrayList(); //回答紀錄
-        int score = 40; //評分%數，假設一開始戰況4:6
+        // ArrayList Save.ans_dict = new ArrayList(); //回答紀錄
+        // int Save.score = 40; //評分%數，假設一開始戰況4:6
         bar.SetActive(false); //我不想讓bar一直出現&消失
 
         for (int index = 0; index < testList.Count; index++){
@@ -98,32 +98,32 @@ public class TextShow : MonoBehaviour
                 // 判斷使用者輸入的選項
                 if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.Alpha1)){
                     Debug.Log("number 1");
-                    ans_dict.Add("number 1"); //記錄下回答
+                    Save.ans_dict.Add(1); //記錄下回答
 
                     if(name == "強尼戴普"){ //判斷是誰在說話
-                        score += 10;
+                        Save.score += 10;
                         Debug.Log("Johnny's round");}
                     else{
-                        score -= 10;
+                        Save.score -= 10;
                         Debug.Log("Amber's round");}         
-                    Debug.Log("score:"+score); //目前分數
-                    setBar(score); //調整陪審團信心度
+                    Debug.Log("Save.score:"+Save.score); //目前分數
+                    setBar(Save.score); //調整陪審團信心度
                 }
 
                 if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Keypad2) || Input.GetKey(KeyCode.Alpha2)){
                     Debug.Log("number 2");
-                    ans_dict.Add("number 2"); //記錄下回答
+                    Save.ans_dict.Add(2); //記錄下回答
                     if(name == "強尼戴普"){ //判斷是誰在說話
-                        score -= 10;
+                        Save.score -= 10;
                         Debug.Log("Johnny's round");}
                     else{
-                        score += 10;
+                        Save.score += 10;
                         Debug.Log("Amber's round");}
-                    Debug.Log("score:"+score); //目前分數
-                    setBar(score); //調整陪審團信心度
+                    Debug.Log("Save.score:"+Save.score); //目前分數
+                    setBar(Save.score); //調整陪審團信心度
                 }
 
-                Debug.Log("cur ans:" + ans_dict[count]); //目前的答題記錄
+                Debug.Log("cur ans:" + Save.ans_dict[count]); //目前的答題記錄
                 Debug.Log("cur count:" + count); //第幾題了
                 count++;
             }
@@ -141,6 +141,7 @@ public class TextShow : MonoBehaviour
                     amber.SetActive(true);
                 else
                     jonny.SetActive(true);
+                setBar(Save.score); //調整陪審團信心度
 
                 // 一個字一個字跳出來的效果s
                 foreach (char letter in chate.ToCharArray()) {

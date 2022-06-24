@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JudgementReport.unity
     guid: 34d1d37f3876041d587692f8a03d1ab2
+  - enabled: 1
+    path: Assets/Finish.unity
+    guid: 22795bc5c72ba4461b12170d1d880dc0
   m_configObjects: {}
