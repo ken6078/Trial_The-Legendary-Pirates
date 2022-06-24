@@ -297,8 +297,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 4900000, guid: ea4550880872d489ab11b1533a68706e, type: 3}
   ReportText: {fileID: 1743131150}
+  NextPage: {fileID: 1352109433}
   textList: []
-  typingSpeed: 0.05
+  typingSpeed: 0.001
 --- !u!4 &1616143963
 Transform:
   m_ObjectHideFlags: 0

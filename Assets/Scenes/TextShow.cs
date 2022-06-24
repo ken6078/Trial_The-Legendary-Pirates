@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextShow : MonoBehaviour
 {
@@ -54,6 +55,8 @@ public class TextShow : MonoBehaviour
             amber.SetActive(false);
             jonny.SetActive(false);  
             //讀到#就判定為註解直接跳過
+            if (testList[index] == "# END OF FILE")
+                SceneManager.LoadScene(2);
             if (testList[index][0] == '#')
                 continue;
             //這一行是選項
