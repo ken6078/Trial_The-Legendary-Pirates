@@ -16,12 +16,15 @@ public class JudgementReport : MonoBehaviour
     //要顯示的字&跳出來的速度
     [SerializeField] List<string> textList = new List<string>();
     [SerializeField] float typingSpeed = 0.001f;
+    //Audio
+    [SerializeField] AudioSource bgm;
     // Start is called before the first frame update
     void Start()
     {
         ReportText.text = "";
         textList = new List<string>(txt.text.Split('\n'));
         NextPage.SetActive(false);
+        bgm.Play();
         StartCoroutine(Type());
     }
     IEnumerator Type() {
@@ -32,7 +35,7 @@ public class JudgementReport : MonoBehaviour
             }else if(textList[index][0] == '#'){
                 //等待使用者按下空白
                 NextPage.SetActive(true);
-                while(!Input.GetKeyDown(KeyCode.Space))
+                while(!Input.GetKeyDown(KeyCode.Space) && (!Input.GetMouseButtonDown(0)))
                     yield return null;
                 ReportText.text = "";
                 NextPage.SetActive(false);

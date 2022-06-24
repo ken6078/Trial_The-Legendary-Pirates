@@ -156,7 +156,7 @@ public class TextShow : MonoBehaviour
                 }
                 
                 //等待使用者按下空白
-                while(!Input.GetKeyDown(KeyCode.Space)){
+                while((!Input.GetKeyDown(KeyCode.Space)) && (!Input.GetMouseButtonDown(0))){
                     yield return null;
                 }
             }            
