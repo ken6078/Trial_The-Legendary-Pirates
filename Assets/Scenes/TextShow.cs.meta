@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8c80fa0ef154447589fd5c8c67d016dd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - txt: {instanceID: 0}
+  - NameTest: {instanceID: 0}
+  - CharTest: {instanceID: 0}
+  - reporter: {instanceID: 0}
+  - judge: {instanceID: 0}
+  - amber: {instanceID: 0}
+  - jonny: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
